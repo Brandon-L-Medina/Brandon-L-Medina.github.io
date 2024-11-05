@@ -3,71 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website for Brandon L Medina, IT Support Specialist and Data Analytics Enthusiast.">
     <title>Brandon L Medina's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file for styling -->
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background */
+        body {
+            background-color: #E0E0E0;
+        }
+
+        /* Center Wrap */
+        .wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #5F5F59;
+            border-radius: 8px;
+            color: #E0E0E0;
+        }
+
+        /* Header & Title */
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #7E7E77;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-weight: bold;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #E0E0E0;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #2392FB;
+        }
+
+        /* Main Content */
+        .content {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #7E7E77;
+            background-color: #E0E0E0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2392FB;
+            color: #E0E0E0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        footer a {
+            color: #E0E0E0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #7E7E77;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+<div class="wrap">
+    <!-- Title -->
     <header>
-        <h1>Brandon L Medina</h1>
-        <p>IT Support Specialist | Data Analytics Enthusiast | Aspiring Data Analyst</p>
+        Brandon L Medina's Portfolio
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm an IT Support Specialist currently working at TGR Foundation and a senior at the University of La Verne pursuing a B.S. in Information Technology with a minor in Business Management. I am passionate about data analysis and have certifications in Google Data Analytics and Systems Engineering. My dream is to work in data analytics, preferably within the sports industry, with the Los Angeles Dodgers as my ultimate goal.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
+    <!-- Navigation Menu -->
+    <nav>
         <ul>
-            <li>Data Analysis (Python, SQL)</li>
-            <li>IT Support & Troubleshooting</li>
-            <li>Database Management (Salesforce Administration)</li>
-            <li>Project Management</li>
-            <li>Business & Sports Analytics</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work-history">Work History</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <h3>IT Support Specialist | TGR Foundation</h3>
-        <p>Supporting TGR Foundation’s technology needs, with a focus on Salesforce and Database Administration. Currently working on implementing Traction Rec at two TGR Learning Lab locations.</p>
-        
-        <h3>Operations Manager & Recruiter | US Navy</h3>
-        <p>Managed and led recruitment operations, overseeing team goals and building relationships with prospective candidates.</p>
-    </section>
+    <!-- Main Content -->
+    <div class="content" id="home">
+        <img src="path/to/your-headshot.jpg" alt="Brandon L Medina Headshot">
+        <p>Welcome! My name is Brandon L Medina, and I am a Data Analyst with a background in Information Technology. 
+        I am currently completing my degree in Information Technology, minoring in Business Management, with a 
+        passion for data analytics, especially in sports and business. My dream is to work as a data analyst for 
+        the Los Angeles Dodgers, blending my love for baseball with my skills in data.</p>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Google Data Analytics Capstone Project</h3>
-            <p>Performed data analysis on a real-world dataset to uncover insights and build predictive models. Utilized Python and SQL to manage, analyze, and visualize data.</p>
-        </div>
-        <div class="project">
-            <h3>Salesforce Permissions Setup</h3>
-            <p>Designed and implemented custom permissions and permission sets in Salesforce to ensure minimal necessary access while providing functionality tailored to each user role.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:brandon@example.com">brandon@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/brandon-medina" target="_blank">linkedin.com/in/brandon-medina</a></p>
-        <p>GitHub: <a href="https://github.com/brandonmedina" target="_blank">github.com/brandonmedina</a></p>
-    </section>
-
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Brandon L Medina. All rights reserved.</p>
+        <p>Connect with me:</p>
+        <a href="mailto:your-email@example.com">Email</a> |
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+        <a href="https://www.bookings-page.com" target="_blank">Bookings</a>
     </footer>
+</div>
 
 </body>
 </html>
