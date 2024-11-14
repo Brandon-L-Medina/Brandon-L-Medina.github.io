@@ -11,6 +11,8 @@ body {
     background-color: #F5F5F5; /* Light Gray Background */
     color: #4A4A4A; /* Cool Gray Text */
     line-height: 1.6;
+    padding-top: 100px; /* Space for the sticky header */
+    padding-bottom: 60px; /* Space for the fixed footer */
 }
 
 /* Header with Background Image */
@@ -18,8 +20,10 @@ body {
     width: 100%;
     background: url("bg.jpg") no-repeat center center;
     background-size: cover;
-    padding: 40px 0;
-    position: relative;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
 }
 
@@ -46,6 +50,9 @@ nav {
     background-color: #1D2A4D; /* Navy Blue */
     padding: 15px 0;
     text-align: center;
+    position: sticky;
+    top: 80px; /* Offset to follow after header */
+    z-index: 1000;
 }
 
 nav ul {
@@ -106,8 +113,11 @@ footer {
     color: #FFFFFF; /* White */
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    margin-top: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
     font-size: 14px;
 }
 
