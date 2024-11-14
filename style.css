@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Ensure Inter is linked or fallback to Roboto */
+    font-family: 'Inter', sans-serif;
 }
 
 /* Body and Background */
@@ -13,27 +13,51 @@ body {
     line-height: 1.6;
 }
 
-/* Full-width Header and Navigation */
+/* Header with Background Image */
 .header-nav {
     width: 100%;
-    background-color: #1D2A4D; /* Navy Blue */
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
     color: #FFFFFF; /* White Text */
+    padding: 40px 0;
+    position: relative;
 }
 
-/* Header Title */
+/* Foggy Overlay Box */
+.header-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(29, 42, 77, 0.5); /* Foggy overlay with Navy Blue tint */
+    z-index: 1;
+}
+
 header {
     text-align: center;
     padding: 20px;
-    font-size: 32px; /* Main header size */
+    font-size: 32px;
     font-weight: bold;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2; /* Ensures text appears on top of the overlay */
+    max-width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white foggy box */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 /* Navigation Menu */
 nav {
-    background-color: #1D2A4D; /* Navy Blue */
+    background-color: rgba(29, 42, 77, 0.9); /* Navy Blue with opacity for better blend with header */
     padding: 10px;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 nav ul {
