@@ -6,20 +6,19 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* Body and Background */
+/* Body Background */
 body {
-    background-color: #F5F5F5; /* Light Gray Background */
-    color: #4A4A4A; /* Cool Gray Text */
+    background-color: #F5F3EF; /* Light Sand */
+    color: #8A8D91; /* Stone Gray for body text */
     line-height: 1.6;
-    padding-top: 100px; /* Space for the sticky header */
+    padding-top: 0; /* Remove extra space at the top */
     padding-bottom: 60px; /* Space for the fixed footer */
 }
 
-/* Header with Background Image */
+/* Header Background */
 .header {
     width: 100%;
-    background: url("bg.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #B4A796; /* Warm Taupe */
     padding: 20px 0;
     position: sticky;
     top: 0;
@@ -27,31 +26,34 @@ body {
     text-align: center;
 }
 
-/* Foggy Overlay Box for Header Text */
+/* Header Title */
 .header header {
     font-size: 32px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white foggy box */
+    color: #F5F3EF; /* Light Sand */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay */
     padding: 20px;
     border-radius: 8px;
     display: inline-block;
 }
 
-/* Link styling for the header title to make it look like plain text */
+/* Link styling for the header title (no underline on hover) */
 .header-link {
     text-decoration: none;
-    color: inherit; /* Inherit the color from the parent header style */
-    display: inline-block;
+    color: inherit; /* Inherit color from the header */
+}
+
+.header-link:hover {
+    text-decoration: none; /* No underline on hover */
 }
 
 /* Navigation Menu directly below Header */
 nav {
-    background-color: #1D2A4D; /* Navy Blue */
+    background-color: #B4A796; /* Warm Taupe */
     padding: 15px 0;
     text-align: center;
     position: sticky;
-    top: 80px; /* Offset to follow after header */
+    top: 60px; /* Adjusts to follow after the header */
     z-index: 1000;
 }
 
@@ -68,13 +70,14 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #FFFFFF; /* White Text */
-    transition: color 0.3s;
+    color: #F5F3EF; /* Light Sand text for navigation links */
+    text-decoration: none; /* No underline by default */
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00A8CC; /* Soft Cyan Hover Effect */
+    color: #5C7080; /* Dusty Blue Hover Effect */
+    text-decoration: underline; /* Underline only on hover */
 }
 
 /* Centered Content Wrap */
@@ -84,7 +87,7 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #FFFFFF; /* White for contrast */
     border-radius: 8px;
-    color: #4A4A4A; /* Cool Gray Text */
+    color: #8A8D91; /* Stone Gray text */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
 }
 
@@ -94,10 +97,11 @@ nav ul li a:hover {
     margin: 20px 0;
 }
 
+/* Image Styling for Headshot */
 .content img {
-    width: 250px; /* Adjusts the size to be proportionate, keeping original aspect ratio */
-    height: auto; /* Ensures the height adjusts automatically to maintain aspect ratio */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
+    width: 250px; /* Adjusted to maintain aspect ratio */
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow around image */
     margin-bottom: 20px;
 }
 
@@ -107,8 +111,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #1D2A4D; /* Navy Blue */
-    color: #FFFFFF; /* White */
+    background-color: #B4A796; /* Warm Taupe */
+    color: #F5F3EF; /* Light Sand for text */
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -120,22 +124,23 @@ footer {
 }
 
 footer a {
-    color: #00A8CC; /* Soft Cyan */
-    text-decoration: none;
+    color: #5C7080; /* Dusty Blue for footer links */
+    text-decoration: none; /* No underline by default */
     margin: 0 10px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 footer a:hover {
-    color: #4A4A4A; /* Cool Gray on hover */
+    color: #484848; /* Charcoal Gray on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Button Style */
 button,
 a.button {
-    background-color: #00A8CC; /* Soft Cyan */
-    color: #FFFFFF; /* White Text */
+    background-color: #5C7080; /* Dusty Blue */
+    color: #FFFFFF; /* White text for buttons */
     padding: 10px 20px;
     border: none;
     border-radius: 20px; /* Rounded/Pill shape */
@@ -149,52 +154,42 @@ a.button {
 
 button:hover,
 a.button:hover {
-    background-color: #4A4A4A; /* Cool Gray on hover */
+    background-color: #484848; /* Charcoal Gray on hover */
 }
 
 /* Typography */
 h1 {
     font-size: 32px;
     font-weight: bold;
-    color: #1D2A4D; /* Navy Blue */
+    color: #484848; /* Charcoal Gray for high contrast */
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #1D2A4D;
+    color: #484848; /* Charcoal Gray for contrast */
     margin-bottom: 15px;
 }
 
 p,
 li {
     font-size: 16px; /* Body text */
-    color: #4A4A4A; /* Cool Gray */
+    color: #8A8D91; /* Stone Gray */
 }
 
-/* Link Styling */
+/* General Link Styling */
 a {
-    color: #00A8CC; /* Soft Cyan */
-    text-decoration: none;
+    color: #5C7080; /* Dusty Blue */
+    text-decoration: none; /* No underline by default */
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #484848; /* Charcoal Gray on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Spacing and White Space */
 .wrap > * {
     margin-bottom: 20px;
-}
-
-/* Hover Effects */
-nav ul li a:hover,
-footer a:hover {
-    color: #00A8CC; /* Subtle color change */
-}
-
-button:hover,
-a.button:hover {
-    background-color: #4A4A4A;
 }
