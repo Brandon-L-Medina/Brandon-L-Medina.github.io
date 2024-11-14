@@ -14,55 +14,44 @@ body {
 }
 
 /* Header with Background Image */
-.header-nav {
+.header {
     width: 100%;
     background: url("bg.jpg") no-repeat center center;
     background-size: cover;
-    color: #FFFFFF; /* White Text */
     padding: 40px 0;
     position: relative;
-}
-
-/* Foggy Overlay Box */
-.header-nav::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(29, 42, 77, 0.5); /* Foggy overlay with Navy Blue tint */
-    z-index: 1;
-}
-
-header {
     text-align: center;
-    padding: 20px;
+}
+
+/* Foggy Overlay Box for Header Text */
+.header header {
     font-size: 32px;
     font-weight: bold;
     color: #FFFFFF;
-    position: relative;
-    z-index: 2; /* Ensures text appears on top of the overlay */
-    max-width: 90%;
-    margin: auto;
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white foggy box */
     padding: 20px;
     border-radius: 8px;
+    display: inline-block;
 }
 
-/* Navigation Menu */
+/* Link styling for the header title to make it look like plain text */
+.header-link {
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the parent header style */
+    display: inline-block;
+}
+
+/* Navigation Menu directly below Header */
 nav {
-    background-color: rgba(29, 42, 77, 0.9); /* Navy Blue with opacity for better blend with header */
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
+    background-color: #1D2A4D; /* Navy Blue */
+    padding: 15px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
