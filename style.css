@@ -8,17 +8,18 @@
 
 /* Body Background */
 body {
-    background-color: #F5F3EF; /* Light Sand */
-    color: #8A8D91; /* Stone Gray for body text */
+    background-color: #E1E5EA; /* Cool Grey */
+    color: #2B2E33; /* Dark Grey for body text */
     line-height: 1.6;
-    padding-top: 0; /* Remove extra space at the top */
+    padding-top: 0;
     padding-bottom: 60px; /* Space for the fixed footer */
 }
 
-/* Header Background */
+/* Header with Background Image */
 .header {
     width: 100%;
-    background-color: #B4A796; /* Warm Taupe */
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
     padding: 20px 0;
     position: sticky;
     top: 0;
@@ -30,8 +31,8 @@ body {
 .header header {
     font-size: 32px;
     font-weight: bold;
-    color: #F5F3EF; /* Light Sand */
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay */
+    color: #FFFFFF; /* White for header text */
+    background-color: rgba(18, 18, 18, 0.7); /* Charcoal Black overlay with slight transparency */
     padding: 20px;
     border-radius: 8px;
     display: inline-block;
@@ -49,11 +50,11 @@ body {
 
 /* Navigation Menu directly below Header */
 nav {
-    background-color: #B4A796; /* Warm Taupe */
+    background-color: #0D6EFD; /* Primary Blue */
     padding: 15px 0;
     text-align: center;
     position: sticky;
-    top: 60px; /* Adjusts to follow after the header */
+    top: 60px; /* Adjusted to follow after the header */
     z-index: 1000;
 }
 
@@ -70,13 +71,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #F5F3EF; /* Light Sand text for navigation links */
+    color: #FFFFFF; /* White text for navigation links */
     text-decoration: none; /* No underline by default */
     transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav ul li a:hover {
-    color: #5C7080; /* Dusty Blue Hover Effect */
+    color: #A9C7E3; /* Soft Blue on hover */
     text-decoration: underline; /* Underline only on hover */
 }
 
@@ -87,7 +88,7 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #FFFFFF; /* White for contrast */
     border-radius: 8px;
-    color: #8A8D91; /* Stone Gray text */
+    color: #2B2E33; /* Dark Grey for text */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
 }
 
@@ -99,8 +100,8 @@ nav ul li a:hover {
 
 /* Image Styling for Headshot */
 .content img {
-    width: 250px; /* Adjusted to maintain aspect ratio */
-    height: auto;
+    width: 250px; /* Adjusted size */
+    height: auto; /* Maintains aspect ratio */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow around image */
     margin-bottom: 20px;
 }
@@ -111,8 +112,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #B4A796; /* Warm Taupe */
-    color: #F5F3EF; /* Light Sand for text */
+    background-color: #121212; /* Charcoal Black */
+    color: #FFFFFF; /* White text for footer */
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -124,7 +125,7 @@ footer {
 }
 
 footer a {
-    color: #5C7080; /* Dusty Blue for footer links */
+    color: #A9C7E3; /* Soft Blue for footer links */
     text-decoration: none; /* No underline by default */
     margin: 0 10px;
     font-weight: bold;
@@ -132,18 +133,18 @@ footer a {
 }
 
 footer a:hover {
-    color: #484848; /* Charcoal Gray on hover */
+    color: #FFFFFF; /* White on hover for contrast */
     text-decoration: underline; /* Underline on hover */
 }
 
 /* Button Style */
 button,
 a.button {
-    background-color: #5C7080; /* Dusty Blue */
+    background-color: #0D6EFD; /* Primary Blue */
     color: #FFFFFF; /* White text for buttons */
     padding: 10px 20px;
     border: none;
-    border-radius: 20px; /* Rounded/Pill shape */
+    border-radius: 20px; /* Rounded/pill shape */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -154,38 +155,38 @@ a.button {
 
 button:hover,
 a.button:hover {
-    background-color: #484848; /* Charcoal Gray on hover */
+    background-color: #121212; /* Charcoal Black on hover */
 }
 
 /* Typography */
 h1 {
     font-size: 32px;
     font-weight: bold;
-    color: #484848; /* Charcoal Gray for high contrast */
+    color: #121212; /* Charcoal Black for high contrast */
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #484848; /* Charcoal Gray for contrast */
+    color: #121212; /* Charcoal Black for contrast */
     margin-bottom: 15px;
 }
 
 p,
 li {
     font-size: 16px; /* Body text */
-    color: #8A8D91; /* Stone Gray */
+    color: #2B2E33; /* Dark Grey */
 }
 
 /* General Link Styling */
 a {
-    color: #5C7080; /* Dusty Blue */
+    color: #0D6EFD; /* Primary Blue for links */
     text-decoration: none; /* No underline by default */
 }
 
 a:hover {
-    color: #484848; /* Charcoal Gray on hover */
+    color: #121212; /* Charcoal Black on hover */
     text-decoration: underline; /* Underline on hover */
 }
 
