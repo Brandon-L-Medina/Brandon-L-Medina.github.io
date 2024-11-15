@@ -6,213 +6,129 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* Body Background */
-body {
-    background-color: #FFFFFF; /* White for a clean, minimalist base */
-    color: #2B2E33; /* Dark Grey for text */
-    line-height: 1.6;
-    padding-top: 0;
-    padding-bottom: 60px; /* Space for the fixed footer */
-}
-
-/* Header Background with Optimized Background Image */
-.header {
-    width: 100%;
-    background: url("bg.jpg") no-repeat center center;
+/* Container */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    background: url("bg.png") no-repeat center center fixed; /* Background image */
     background-size: cover;
-    padding: 20px 0;
-    position: sticky;
+}
+
+/* Header Layout */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal space for each section */
+    align-items: center;
+    background-color: #1B3A57; /* Primary Navy Blue */
+    color: #FFFFFF; /* White text */
+    padding: 10px; /* Reduced padding for a thinner header */
+    position: fixed;
     top: 0;
-    z-index: 1000;
-    text-align: center;
-}
-
-/* Header Title */
-.header header {
-    font-size: 32px;
-    font-weight: bold;
-    color: #FFFFFF; /* White text for contrast */
-    background-color: rgba(18, 18, 18, 0.8); /* Charcoal Black with opacity */
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-/* Link styling for the header title (no underline on hover) */
-.header-link {
-    text-decoration: none;
-    color: inherit; /* Inherit color from the header */
-}
-
-.header-link:hover {
-    text-decoration: none; /* No underline on hover */
-}
-
-/* Navigation Menu directly below Header */
-nav {
-    background-color: #1B3A57; /* Primary Blue */
-    padding: 15px 0;
-    text-align: center;
-    position: sticky;
-    top: 60px; /* Adjusted to follow after the header */
+    width: 100%;
     z-index: 1000;
 }
 
-nav ul {
+.logo {
+    text-align: center;
+}
+
+.title {
+    text-align: center; /* Center title text */
+}
+
+.main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
 }
 
-nav ul li {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a {
-    color: #FFFFFF; /* White text for navigation links */
-    text-decoration: none; /* No underline by default */
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-nav ul li a:hover {
-    color: #A9C7E3; /* Soft Blue Hover Effect */
-    text-decoration: underline; /* Underline only on hover */
-}
-
-/* Centered Content Wrap */
-.wrap {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #E1E5EA; /* Cool Grey */
-    border-radius: 8px;
-    color: #2B2E33; /* Dark Grey text */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
-}
-
-/* Main Content Styling */
-.content {
+.contact-action {
     text-align: center;
-    margin: 20px 0;
 }
 
-/* Image Styling for Headshot */
-.content img {
-    width: 250px; /* Adjusted size while maintaining aspect ratio */
+.contact-action a button {
+    padding: 5px 15px; /* Smaller button padding */
+}
+
+/* Adjust navigation items for header alignment */
+.main-nav ul li a {
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+    padding: 5px 10px; /* Padding to improve click area */
+}
+
+.main-nav ul li a:hover {
+    color: #A9C7E3; /* Soft Blue */
+}
+
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px; /* Adjusted for fixed header */
+    text-align: center;
+}
+
+/* Main Content Layout */
+.body-content {
+    background-color: rgba(255, 255, 255, 0.75); /* White with 75% opacity */
+    padding: 20px;
+    color: #2B2E33; /* Dark Grey */
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headshot Image */
+.headshot {
+    width: 200px; /* Optimized width */
     height: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow around image */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
     margin-bottom: 20px;
 }
 
-.content p {
-    font-size: 16px;
-}
-
-/* Footer */
-footer {
+/* Footer Layout */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #121212; /* Charcoal Black */
     color: #FFFFFF; /* White text */
     padding: 20px;
     text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Footer Navigation */
-footer nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around; /* Spread items evenly across footer */
-}
-
-footer nav ul {
+/* Footer Navigation Items */
+.footer-nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
-footer nav ul li {
-    font-weight: bold;
-}
-
-footer nav ul li a {
-    color: #FFFFFF; /* White text */
-    text-decoration: none; /* No underline */
-    font-size: 14px;
-}
-
-footer a {
-    color: #A9C7E3; /* Soft Blue for footer links */
-    text-decoration: none; /* No underline by default */
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-
-/* Button Style */
-button,
-a.button {
-    background-color: #A9C7E3; /* Soft Blue */
-    color: #FFFFFF; /* White text for buttons */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px; /* Rounded/Pill shape */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.footer-nav ul li a {
+    color: #FFFFFF;
     text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
 }
 
-button:hover,
-a.button:hover {
-    background-color: #2B2E33; /* Dark Grey on hover */
+.footer-contact a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-/* Typography */
-h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #121212; /* Charcoal Black for high contrast */
-    margin-bottom: 20px;
+.footer-contact a:hover {
+    color: #A9C7E3; /* Soft Blue on hover */
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #121212; /* Charcoal Black for contrast */
-    margin-bottom: 15px;
-}
-
-p,
-li {
-    font-size: 16px; /* Body text */
-    color: #2B2E33; /* Dark Grey */
-}
-
-/* General Link Styling */
-a {
-    color: #A9C7E3; /* Soft Blue */
-    text-decoration: none; /* No underline by default */
-}
-
-a:hover {
-    color: #2B2E33; /* Dark Grey on hover */
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Spacing and White Space */
-.wrap > * {
-    margin-bottom: 20px;
+.alt-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
