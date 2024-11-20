@@ -63,33 +63,96 @@
     color: #A9C7E3; /* Soft Blue */
 }
 
-
 /* Main Content Layout */
 .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px 20px; /* Adjusted for fixed header */
+    padding: 120px 20px 20px; /* Adjusted for fixed header */
     text-align: center;
+    min-height: calc(100vh - 160px); /* Adjust for fixed header and footer */
 }
 
-/* Main Content Layout */
+/* Consistent Body Content Wrapping */
 .body-content {
-    background-color: rgba(255, 255, 255, 0.75); /* White with 75% opacity */
-    padding: 20px;
-    color: #2B2E33; /* Dark Grey */
-    border-radius: 8px;
     max-width: 800px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Headshot Image */
+/* Headshot Container */
+.headshot-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-bottom: 20px; /* Space below the image */
+}
+
 .headshot {
-    width: 200px; /* Optimized width */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
-    margin-bottom: 20px;
+    width: 300px; /* Adjusted for high-resolution image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    border: 3px solid #ccc; /* Enhanced border */
+}
+
+/* Certificate Section */
+.certificate-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the content within the container */
+    max-width: 800px; /* Limit the width of the content */
+    padding: 50px 20px; /* Add padding to avoid content touching edges */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.certificate-preview {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+
+.preview-image {
+    width: 100%;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-image:hover {
+    transform: scale(1.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.certificate-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between details */
+    max-width: 500px;
+    text-align: left; /* Align text to the left for readability */
+}
+
+.skills-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
 }
 
 /* Footer Layout */
@@ -126,9 +189,3 @@
     color: #A9C7E3; /* Soft Blue on hover */
 }
 
-.alt-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}

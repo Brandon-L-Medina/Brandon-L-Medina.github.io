@@ -9,12 +9,12 @@
 <body>
 
 <div class="container">
-    <!-- Header Section with Logo, Title, Navigation, and Contact Button -->
+    <!-- Header Section -->
     <header class="header">
         <div class="logo">Logo</div>
         <div class="title">
             <h1>Brandon L Medina</h1>
-            <p>Portfolio Home</p>
+            <p>Certifications</p>
         </div>
         <nav class="main-nav">
             <ul>
@@ -32,15 +32,28 @@
 </div>
     </header>
 
-    <!-- Main Content with Centered Headshot and Background Image -->
+    <!-- Certificate Section -->
     <div class="main-content">
-        <div class="body-content">
+        <div class="certificate-container">
+            <div class="certificate-preview">
+                <img src="GoogleDA.jpg" alt="Certificate Preview" class="preview-image" id="certificatePreview">
+            </div>
+            <div class="certificate-details">
+                <h2>Google Data Analytics Certificate</h2>
+                <p><strong>Awarding Organization:</strong> Grow With Google</p>
+                <p><strong>Date of Accomplishment:</strong> August 2022</p>
+                <p><strong>Description:</strong> Comprehensive program focused on data analysis, visualization, and using Python, SQL, and R for data-driven decision-making.</p>
+                <div class="skills-box">
+                    <div class="skill">Data Analysis</div>
+                    <div class="skill">SQL Queries</div>
+                    <div class="skill">Python Scripting</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer with Footer Navigation, Contact Links, and Alt Logo -->
+    <!-- Footer -->
     <footer class="footer">
-        <!-- Footer Navigation Links -->
         <nav class="footer-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -50,12 +63,24 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
-        <!-- Connect with Me Links -->
         <div class="footer-contact">
             <a href="mailto:brandon.l.medina@outlook.com">Email</a> |
             <a href="https://www.linkedin.com/in/brandonlmedina/" target="_blank">LinkedIn</a>
         </div>
     </footer>
 </div>
+
+<script>
+    const previewImage = document.getElementById('certificatePreview');
+
+    // Event listener for click to download
+    previewImage.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'GoogleDA.pdf'; // Path to your certificate PDF
+        link.download = 'Google_Data_Analytics_Certificate.pdf';
+        link.click();
+    });
+</script>
+
 </body>
 </html>
