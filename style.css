@@ -12,7 +12,8 @@
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     min-height: 100vh;
-    background: url("bg.png") no-repeat center center fixed; /* Background image */
+    background-color: #d9dee3;
+    /*background: url("bg.png") no-repeat center center fixed; /* Background image */
     background-size: cover;
 }
 
@@ -21,8 +22,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal space for each section */
     align-items: center;
-    background-color: #1B3A57; /* Primary Navy Blue */
-    color: #FFFFFF; /* White text */
+    background-color: #d9dee3; /* Primary Navy Blue */
+    color: #212121; /* White text */
     padding: 10px; /* Reduced padding for a thinner header */
     position: fixed;
     top: 0;
@@ -54,7 +55,7 @@
 
 /* Adjust navigation items for header alignment */
 .main-nav ul li a {
-    color: #FFFFFF; /* White text */
+    color: #212121; /* White text */
     text-decoration: none;
     padding: 5px 10px; /* Padding to improve click area */
 }
