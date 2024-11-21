@@ -1,210 +1,190 @@
-/* Basic Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Container */
-.container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    min-height: 100vh;
-    background-color: #FFFFFF; /* Primary Background */
-    background-size: cover;
+body {
+    background-color: #F5F7FA;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Header Layout */
-.header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal space for each section */
+/* Header Section */
+.main-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #C1C2C3; /* Secondary Background */
-    color: #070A0E; /* Body Text */
-    padding: 10px; /* Reduced padding for a thinner header */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    padding: 10px 20px;
+    background: #F5F7FA;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 .logo {
-    text-align: center;
-    color: #45474A; /* Titles */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2C3E50;
 }
 
-.title {
-    text-align: center; /* Center title text */
-    color: #070A0E; /* Body Text */
-}
-
-.main-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    gap: 15px;
 }
 
-.contact-action {
-    text-align: center;
-}
-
-.contact-action a button {
-    padding: 5px 15px; /* Smaller button padding */
-    background-color: #DF3143; /* Primary Button Fill */
-    border: 2px solid #DF3143; /* Primary Button Border */
-    color: #FFFFFF; /* Primary Button Text */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.contact-action a button:hover {
-    background-color: #FFFFFF; /* Primary Button Hover Fill */
-    color: #DF3143; /* Primary Button Hover Text */
-    border: 2px solid #DF3143; /* Primary Button Hover Border */
-}
-
-/* Adjust navigation items for header alignment */
-.main-nav ul li a {
-    color: #070A0E; /* Body Text */
+.nav-links li a {
     text-decoration: none;
-    padding: 5px 10px; /* Padding to improve click area */
+    color: #2C3E50;
+    font-weight: bold;
 }
 
-.main-nav ul li a:hover {
-    color: #DF3143; /* Links and Actions */
+.nav-links li a:hover {
+    color: #3498DB;
 }
 
-/* Main Content Layout */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 20px 20px; /* Adjusted for fixed header */
-    text-align: center;
-    min-height: calc(100vh - 160px); /* Adjust for fixed header and footer */
-}
-
-/* Consistent Body Content Wrapping */
-.body-content {
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: #070A0E; /* Body Text */
-}
-
-.body-content h1 {
-    color: #45474A; /* Titles */
-}
-
-/* Headshot Container */
-.headshot-container {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    margin-bottom: 20px; /* Space below the image */
-}
-
-.headshot {
-    width: 300px; /* Adjusted for high-resolution image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
-    border: 3px solid #DF3143; /* Lines & Dividers */
-}
-
-/* Certificate Section */
-.certificate-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start; /* Align items at the top */
-    justify-content: center; /* Center content horizontally */
-    margin: 0 auto; /* Center the content within the container */
-    max-width: 800px; /* Limit the width of the content */
-    padding: 50px 20px; /* Add padding to avoid content touching edges */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.certificate-preview {
-    position: relative;
-    width: 200px;
-    cursor: pointer;
-}
-
-.preview-image {
-    width: 100%;
-    border: 2px solid #DF3143; /* Lines & Dividers */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.preview-image:hover {
-    transform: scale(1.5);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-}
-
-.certificate-details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between details */
-    max-width: 500px;
-    text-align: left; /* Align text to the left for readability */
-    color: #070A0E; /* Body Text */
-}
-
-.skills-box {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.skill {
-    background-color: #F0F0F0; /* Secondary Background */
-    border: 1px solid #DF3143; /* Lines & Dividers */
+.resume-btn .btn {
+    background: #3498DB;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
+    transition: background 0.3s;
 }
 
-/* Footer Layout */
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #C1C2C3; /* Secondary Background */
-    color: #070A0E; /* Body Text */
-    padding: 20px;
+.resume-btn .btn:hover {
+    background: #2C3E50;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 50px 20px;
+    background: #ECF0F1;
 }
 
-/* Footer Navigation Items */
-.footer-nav ul {
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-pic img {
+    max-width: 200px; /* Adjust this to your desired max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Use rounded corners instead of a circle */
+    border: 3px solid #3498DB;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #7F8C8D;
+}
+
+.hobbies h3 {
+    margin: 30px 0 10px;
+    color: #2C3E50;
+}
+
+.hobbies ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
+}
+
+.hobbies ul li {
+    background: #3498DB;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Content Section (For Projects and Certificates) */
+.content-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.projects-container, .certificates-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project, .certificate {
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    background: #F5F7FA;
+}
+
+.project h3, .certificate h3 {
+    margin-bottom: 10px;
+    color: #3498DB;
+}
+
+.project p, .certificate p {
+    color: #333;
+}
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #2C3E50;
+    color: #ECF0F1;
+}
+
+.contact h3, .form h3 {
     margin-bottom: 10px;
 }
 
-.footer-nav ul li a {
-    color: #DF3143; /* Links and Actions */
+.contact ul {
+    list-style: none;
+}
+
+.contact ul li {
+    margin-bottom: 5px;
+}
+
+.contact ul li a {
+    color: #3498DB;
     text-decoration: none;
 }
 
-.footer-contact a {
-    color: #070A0E; /* Body Text */
-    text-decoration: none;
+.form input, .form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
-.footer-contact a:hover {
-    color: #DF3143; /* Links and Actions */
+.form button {
+    background: #3498DB;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
