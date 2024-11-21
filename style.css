@@ -12,8 +12,7 @@
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     min-height: 100vh;
-    background-color: #d9dee3;
-    /*background: url("bg.png") no-repeat center center fixed; /* Background image */
+    background-color: #FFFFFF; /* Primary Background */
     background-size: cover;
 }
 
@@ -22,8 +21,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Equal space for each section */
     align-items: center;
-    background-color: #d9dee3; /* Primary Navy Blue */
-    color: #212121; /* White text */
+    background-color: #C1C2C3; /* Secondary Background */
+    color: #070A0E; /* Body Text */
     padding: 10px; /* Reduced padding for a thinner header */
     position: fixed;
     top: 0;
@@ -33,10 +32,12 @@
 
 .logo {
     text-align: center;
+    color: #45474A; /* Titles */
 }
 
 .title {
     text-align: center; /* Center title text */
+    color: #070A0E; /* Body Text */
 }
 
 .main-nav ul {
@@ -51,17 +52,29 @@
 
 .contact-action a button {
     padding: 5px 15px; /* Smaller button padding */
+    background-color: #DF3143; /* Primary Button Fill */
+    border: 2px solid #DF3143; /* Primary Button Border */
+    color: #FFFFFF; /* Primary Button Text */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-action a button:hover {
+    background-color: #FFFFFF; /* Primary Button Hover Fill */
+    color: #DF3143; /* Primary Button Hover Text */
+    border: 2px solid #DF3143; /* Primary Button Hover Border */
 }
 
 /* Adjust navigation items for header alignment */
 .main-nav ul li a {
-    color: #212121; /* White text */
+    color: #070A0E; /* Body Text */
     text-decoration: none;
     padding: 5px 10px; /* Padding to improve click area */
 }
 
 .main-nav ul li a:hover {
-    color: #A9C7E3; /* Soft Blue */
+    color: #DF3143; /* Links and Actions */
 }
 
 /* Main Content Layout */
@@ -82,6 +95,11 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #070A0E; /* Body Text */
+}
+
+.body-content h1 {
+    color: #45474A; /* Titles */
 }
 
 /* Headshot Container */
@@ -96,7 +114,7 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slight shadow */
-    border: 3px solid #ccc; /* Enhanced border */
+    border: 3px solid #DF3143; /* Lines & Dividers */
 }
 
 /* Certificate Section */
@@ -122,7 +140,7 @@
 
 .preview-image {
     width: 100%;
-    border: 2px solid #ccc;
+    border: 2px solid #DF3143; /* Lines & Dividers */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -139,6 +157,7 @@
     gap: 10px; /* Space between details */
     max-width: 500px;
     text-align: left; /* Align text to the left for readability */
+    color: #070A0E; /* Body Text */
 }
 
 .skills-box {
@@ -148,8 +167,8 @@
 }
 
 .skill {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: #F0F0F0; /* Secondary Background */
+    border: 1px solid #DF3143; /* Lines & Dividers */
     border-radius: 5px;
     padding: 5px 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -161,8 +180,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #121212; /* Charcoal Black */
-    color: #FFFFFF; /* White text */
+    background-color: #C1C2C3; /* Secondary Background */
+    color: #070A0E; /* Body Text */
     padding: 20px;
     text-align: center;
 }
@@ -177,16 +196,15 @@
 }
 
 .footer-nav ul li a {
-    color: #FFFFFF;
+    color: #DF3143; /* Links and Actions */
     text-decoration: none;
 }
 
 .footer-contact a {
-    color: #FFFFFF;
+    color: #070A0E; /* Body Text */
     text-decoration: none;
 }
 
 .footer-contact a:hover {
-    color: #A9C7E3; /* Soft Blue on hover */
+    color: #DF3143; /* Links and Actions */
 }
-

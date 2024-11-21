@@ -1,0 +1,20 @@
+Primary Background - #FFFFFF
+Secondary Background - # C1C2C3
+Lines & Dividers - #DF3143
+Titles - # 45474A
+Subtitles - #070A0E
+Body Text - #070A0E
+Secondary Text -  # 45474A
+Links and Actions - #DF3143
+Primary Button fill - #DF3143
+Primary Button Boarder - #DF3143
+Primary Button Text- #FFFFFF
+Primary Button Hover fill- #FFFFFF
+Primary Button Hover Boarder - #DF3143
+Primary Button Hover Text - #DF3143
+Secondary Button fill- #FFFFFF
+Secondary Button Boarder - #DF3143
+Secondary Button Text - #DF3143
+Secondary Button Hover fill - #DF3143
+Secondary Button Hover Boarder - #DF3143
+Secondary Button Hover Text- #FFFFFF
